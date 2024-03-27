@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Aircraft: 737-800</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .seat-map {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+    }
+
+    .seat {
+      width: 80px;
+      height: 80px;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 80px;
+      cursor: pointer;
+    }
+
+    .seat.selected {
+      background-color: yellow;
+    }
+
+    .seat.unavailable {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button-container button {
+      padding: 10px 20px;
+    }
+
+       .home-bar {
+      background-color: #ffff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .home-bar img {
+  height: 15px;
+  margin-right: 10px;
+}
+
+.home-bar a {
+  color: grey;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: normal;
+}
+
+.home-bar a:hover {
+  text-decoration: underline;
+}
+
+    .announcement-bar {
+      background-color: blue;
+      color: #ffff;
+      padding: 5px;
+      text-align: center;
+    }
+      
+  </style>
+   <script>
+var selectedSeat = null;
+
+function selectSeat(seat) {
+  if (!seat.classList.contains("unavailable")) {
+    if (selectedSeat) {
+      selectedSeat.classList.remove("selected");
+    }
+    seat.classList.add("selected");
+    selectedSeat = seat;
+  }
+}
+
+function generateSeatMap() {
+  var seatMap = document.getElementById("seat-map");
+
+  // Assuming a 3-row by 6-column seat arrangement for the Airbus A320
+  var rows = 27;
+  var columns = 6;
+
+  for (var row = 1; row <= rows; row++) {
+    for (var col = 1; col <= columns; col++) {
+      var seat = document.createElement("div");
+      seat.classList.add("seat");
+      seat.textContent = String.fromCharCode(64 + row) + col;
+
+
+      seat.addEventListener("click", function() {
+        selectSeat(this);
+      });
+
+      seatMap.appendChild(seat);
+    }
+  }
+}
+
+
+window.addEventListener("DOMContentLoaded", function() {
+  generateSeatMap();
+});
+
+  </script>
+</head>
+  <link rel="icon" type="image/png" href="IMG_5268.png">
+<div class="home-bar">
+  <img src="IMG_5267.png" alt="Logo" href="index.html">
+  <a href="cargo.html">CARGO</a>
+  <a href="check-in.html">WEB CHECK-IN</a>
+  <a href="baggage.html">BAGGAGE</a>
+  <a href="seats.html">SEATS</a>
+</div>
+
+  <div class="announcement-bar">
+    <p>ANNOUNCEMENT
+Welcome to Ubleble Airways!</p>
+  </div>
+<body>
+  <div class="container">
+    <h1>Ubleble Airways: 737-800</h1>
+    <div id="seat-map" class="seat-map"></div>
+    <div class="button-container">
+    </div>
+  </div>
+</body>
+</html>

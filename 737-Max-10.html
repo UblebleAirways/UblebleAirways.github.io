@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Aircraft: a319</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .seat-map {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+    }
+
+    .seat {
+      width: 80px;
+      height: 80px;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 80px;
+      cursor: pointer;
+    }
+
+    .seat.selected {
+      background-color: yellow;
+    }
+
+    .seat.unavailable {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button-container button {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Seat Selection</h1>
+    <div id="seat-map" class="seat-map"></div>
+    <div class="button-container">
+    </div>
+  </div>
+
+  <script>
+    var selectedSeat = null;
+
+function selectSeat(seat) {
+  if (!seat.classList.contains("unavailable")) {
+    if (selectedSeat) {
+      selectedSeat.classList.remove("selected");
+    }
+    seat.classList.add("selected");
+    selectedSeat = seat;
+  }
+}
+
+function generateSeatMap() {
+  var seatMap = document.getElementById("seat-map");
+
+  // Assuming a 3-row by 6-column seat arrangement for the Airbus A320
+  var rows = 3;
+  var columns = 6;
+
+  for (var row = 1; row <= rows; row++) {
+    for (var col = 1; col <= columns; col++) {
+      var seat = document.createElement("div");
+      seat.classList.add("seat");
+      seat.textContent = String.fromCharCode(64 + row) + col;
+
+      // Assuming seat availability based on some logic
+      if (row === 1 && col === 6) {
+        seat.classList.add("unavailable");
+      }
+
+      seat.addEventListener("click", function() {
+        selectSeat(this);
+      });
+
+      seatMap.appendChild(seat);
+    }
+  }
+}
+
+}
+
+window.addEventListener("DOMContentLoaded", function() {
+  generateSeatMap();
+});
+  </script>
+</body>
+</html>

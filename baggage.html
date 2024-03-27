@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+label, input, select {
+  display: block;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+    .home-bar {
+      background-color: #ffff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .home-bar img {
+  height: 15px;
+  margin-right: 10px;
+}
+
+.home-bar a {
+  color: grey;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: normal;
+}
+
+.home-bar a:hover {
+  text-decoration: underline;
+}
+
+    .announcement-bar {
+      background-color: blue;
+      color: #ffff;
+      padding: 5px;
+      text-align: center;
+    }
+      
+
+</style>
+  <script>
+document.getElementById("checkin-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  if (validateForm()) {
+    // Simulate payment success
+    alert("Payment successful");
+    window.location.href = "index.html";
+  }
+});
+
+function validateForm() {
+  // Validate bag weight
+  var bagWeight = document.getElementById("bag-weight").value;
+  if (bagWeight === "" || bagWeight <= 0 || bagWeight > 30) {
+    alert("Invalid bag weight");
+    return false;
+  }
+
+  // Validate departure
+  var departure = document.getElementById("departure").value;
+  if (departure === "") {
+    alert("Please enter the departure location");
+    return false;
+  }
+
+  // Validate arrival
+  var arrival = document.getElementById("arrival").value;
+  if (arrival === "") {
+    alert("Please enter the arrival location");
+    return false;
+  }
+
+  // Validate delivery date
+  var deliveryDate = document.getElementById("delivery-date").value;
+  if (deliveryDate === "") {
+    alert("Please enter the delivery date");
+    return false;
+  }
+
+  // Validate price
+  var price = document.getElementById("price").value;
+  if (price === "" || price < 5 || price > 50) {
+    alert("Invalid price");
+    return false;
+  }
+
+  // Validate name
+  var name = document.getElementById("name").value;
+  if (name === "") {
+    alert("Please enter your name");
+    return false;
+  }
+
+  // Validate surname
+  var surname = document.getElementById("surname").value;
+  if (surname === "") {
+    alert("Please enter your surname");
+    return false;
+  }
+
+  // Validate email
+  var email = document.getElementById("email").value;
+  if (email === "") {
+    alert("Please enter your email");
+    return false;
+  }
+
+  // Validate passport number
+  var passport = document.getElementById("passport").value;
+  if (passport === "") {
+    alert("Please enter your passport number");
+    return false;
+  }
+
+  return true;
+}
+
+  </script>
+  
+  <title>Airplane Baggage Check-in</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <link rel="icon" type="image/png" href="IMG_5268.png">
+<div class="home-bar">
+  <img src="IMG_5267.png" alt="Logo" href="index.html">
+  <a href="cargo.html">CARGO</a>
+  <a href="check-in.html">WEB CHECK-IN</a>
+  <a href="index.html">BOOKING</a>
+  <a href="seats.html">SEATS</a>
+</div>
+
+  <div class="announcement-bar">
+    <p>ANNOUNCEMENT
+Check in your bags here!</p>
+  </div>
+
+<body>
+  <h1>Airplane Baggage Check-in</h1>
+  <form id="checkin-form">
+    <label for="bag-weight">Bag Weight (max 30kg):</label>
+    <input type="number" id="bag-weight" min="1" max="30" required><br>
+
+    <label for="departure">Departure:</label>
+    <input type="text" id="departure" required><br>
+
+    <label for="arrival">Arrival:</label>
+    <input type="text" id="arrival" required><br>
+
+    <label for="delivery-date">Delivery Date:</label>
+    <input type="date" id="delivery-date" required><br>
+
+    <label for="price">Price ($5 - $50):</label>
+    <input type="number" id="price" min="5" max="50" required><br>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br>
+
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br>
+
+    <label for="phone">Phone Number (optional):</label>
+    <input type="tel" id="phone"><br>
+
+    <label for="address">Address (optional):</label>
+    <input type="text" id="address"><br>
+
+    <label for="passport">Passport Number:</label>
+    <input type="text" id="passport" required><br>
+
+    <label for="payment-method">Payment Method:</label>
+    <select id="payment-method">
+      <option value="credit-card">Credit Card</option>
+      <option value="paypal">PayPal</option>
+      <option value="true-money">True Money</option>
+    </select><br>
+
+    <button type="submit">Pay</button>
+  </form>
+  <footer>
+    <p>Contact us at info.ublebleairways@gmail.com</p>
+    <p>&copy; Ubleble Airways. All rights reserved</p>
+  </footer>
+</body>
+</html>

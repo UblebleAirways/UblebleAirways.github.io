@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ubleble Airways: Number 1 Russian Airline!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 5px;
+    }
+
+    input[type="radio"] {
+      margin: 0 5px 0 10px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .flight-details {
+      margin-top: 30px;
+    }
+
+    .flight-details h2 {
+      margin-bottom: 10px;
+    }
+
+    .flight {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .flight button {
+      padding: 5px 10px;
+    }
+
+    .home-bar {
+      background-color: #ffff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .home-bar img {
+  height: 15px;
+  margin-right: 10px;
+}
+
+.home-bar a {
+  color: grey;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: normal;
+}
+
+.home-bar a:hover {
+  text-decoration: underline;
+}
+
+    .announcement-bar {
+      background-color: blue;
+      color: #ffff;
+      padding: 5px;
+      text-align: center;
+    }
+      
+</style>
+<link rel="icon" type="image/png" href="IMG_5268.png">
+<div class="home-bar">
+  <img src="IMG_5267.png" alt="Logo" href="index.html">
+  <a href="cargo.html">CARGO</a>
+  <a href="check-in.html">WEB CHECK-IN</a>
+  <a href="baggage.html">BAGGAGE</a>
+  <a href="seats.html">SEATS</a>
+</div>
+
+  <div class="announcement-bar">
+    <p>ANNOUNCEMENT
+Welcome to Ubleble Airways!</p>
+  </div>
+
+</style>
+</head>
+<body>
+
+  <form id="booking-form">
+
+     <label for="departure">Departure:</label>
+    <select id="departure">
+      <option value="">Select Departure</option>
+      <option value="Bangkok">Bangkok</option>
+      <option value="Moscow">Moscow</option>
+      <option value="Chang Rai">Chang Rai</option>
+      <option value="Chiang Mai">Chiang Mai</option>
+      <option value="Bangkok (DMK)">Bangkok (DMK)</option>
+      <option value="Hat Yai">Hat Yai</option>
+      <option value="Samui">Samui</option>
+      <option value="Phuket">Phuket</option>
+      <option value="Krabi">Krabi</option>
+      <option value="Surat Thani">Surat Thani</option>
+      <option value="Jarkarta">Jarkarta</option>
+      <option value="Singapore">Singapore</option>
+      <option value="Sydney">Sydney</option>
+      <option value="New York City">New York City</option>
+      <option value="Los Angles">Los Angles</option>
+      <option value="San Fransico">San Fransico</option>
+      <option value="Alaska">Alaska</option>
+      <option value="Washington DC">Washington DC</option>
+      <option value="Cleavland">Cleavland</option>
+      <option value="Springfield">Springfield</option>
+      <option value="New Mexico">New Mexico</option>
+      <option value="London">London</option>
+      <option value="Berlin">Berlin</option>
+      <option value="Manchester">Manchester</option>
+      <option value="Liverpool">Liverpool</option>
+      <option value="Dubai">Dubai</option>
+      <option value="Tokyo">Tokyo</option>
+      <option value="Okinawa">Okinawa</option>
+      <option value="Hokkaido">Hokkaido</option>
+      <option value="Bejing">Bejing</option>
+      <option value="Taiwan">Taiwan</option>
+      <option value="Seoul">Seoul</option>
+      <option value="North Korea">North Korea</option>
+    </select>
+
+    <label for="arrival">Arrival:</label>
+    <select id="arrival">
+      <option value="">Select Arrival</option>
+      <option value="Moscow">Moscow</option>
+      <option value="Bangkok">Bangkok</option>
+      <option value="Chang Rai">Chang Rai</option>
+      <option value="Chiang Mai">Chiang Mai</option>
+      <option value="Bangkok (DMK)">Bangkok (DMK)</option>
+      <option value="Hat Yai">Hat Yai</option>
+      <option value="Samui">Samui</option>
+      <option value="Phuket">Phuket</option>
+      <option value="Krabi">Krabi</option>
+      <option value="Surat Thani">Surat Thani</option>
+      <option value="Jarkarta">Jarkarta</option>
+      <option value="Singapore">Singapore</option>
+      <option value="Sydney">Sydney</option>
+      <option value="New York City">New York City</option>
+      <option value="Los Angles">Los Angles</option>
+      <option value="San Fransico">San Fransico</option>
+      <option value="Alaska">Alaska</option>
+      <option value="Washington DC">Washington DC</option>
+      <option value="Cleavland">Cleavland</option>
+      <option value="Springfield">Springfield</option>
+      <option value="New Mexico">New Mexico</option>
+      <option value="London">London</option>
+      <option value="Berlin">Berlin</option>
+      <option value="Manchester">Manchester</option>
+      <option value="Liverpool">Liverpool</option>
+      <option value="Dubai">Dubai</option>
+      <option value="Tokyo">Tokyo</option>
+      <option value="Okinawa">Okinawa</option>
+      <option value="Hokkaido">Hokkaido</option>
+      <option value="Bejing">Bejing</option>
+      <option value="Taiwan">Taiwan</option>
+      <option value="Seoul">Seoul</option>
+      <option value="North Korea">North Korea</option>
+    </select>
+
+    <label for="date">Date:</label>
+
+    <label for="date">Arrive:</label>
+    <input type="date" id="date" required>
+
+    <label for="date">Return:</label>
+    <input type="date" id="date" required>
+
+    
+    <label for="flight-type">Flight Type:</label>
+  
+    
+    
+    <label for="return">Return</label>
+    <input type="radio" id="return" name="flight-type" value="return">
+    <label for="one-way">One Way</label>
+    <input type="radio" id="one-way" name="flight-type" value="one-way">
+
+    <label for="passengers">Passengers:</label>
+    <label for="infant">Infant (Age: 0-3):</label>
+    <input type="number" id="infant" min="0" value="0">
+    <label for="child">Child (Age: 4-11):</label>
+    <input type="number" id="child" min="0" value="0">
+    <label for="adult">Adult (Age: 12+):</label>
+    <input type="number" id="adult" min="0" value="0">
+
+
+    <input type="submit" value="Search Flights">
+  </form>
+
+  <div id="flights-container" class="flight-details" style="display: none;">
+    <h2>Available Flights:</h2>
+  </div>
+
+  <div id="payment-container" class="flight-details" style="display: none;">
+    <h2>Payment Details:</h2>
+    <form id="payment-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="passport">Passport Number:</label>
+      <input type="text" id="passport" required>
+
+      <label for="address">Address (Optional):</label>
+      <input type="text" id="address">
+      
+      <label for="phone">Phone Number (Optional):</label>
+      <input type="tel" id="phone">
+     
+      <h3>Select Payment Method:</h3>
+      <label for="credit-card">
+        <input type="text" id="credit-card" name="payment-method" value="credit-card" checked>
+        Credit Card
+      </label>
+      <label for="paypal">
+        <input type="radio" id="paypal" name="payment-method" value="paypal">
+        PayPal
+      </label>
+      <label for="wechat-pay">
+        <input type="radio" id="wechat-pay" name="payment-method" value="wechat-pay">
+        WeChat Pay
+        <label for="true-money">
+        <input type="radio" id="true-money" name="payment-method" value="true-money">
+        True Money
+          <label for="k-plus">
+        <input type="radio" id="k-plus" name="payment-method" value="k-plus">
+        K Plus
+            <label for="ubleble-credits">
+            <input type="radio" id="ubleble-credits" name="payment-method" value="ubleble-credits">
+        Pay With Credits
+      </label>
+
+      <input type="submit" value="Pay Now">
+    </form>
+  </div>
+
+  <div id="payment-success" class="flight-details" style="display: none;">
+    <h2>Payment Successful!</h2>
+    <p>Thank you for choosing Ubleble Airways! Your booking email should arive in 10 - 30 min!</p>
+  </div>
+  <footer>
+    <p>Contact us at info.ublebleairways@gmail.com</p>
+    <p>&copy; Ubleble Airways. All rights reserved</p>
+    
+
+  <script>
+    var bookingForm = document.getElementById("booking-form");
+    var flightsContainer = document.getElementById("flights-container");
+    var paymentContainer = document.getElementById("payment-container");
+    var paymentForm = document.getElementById("payment-form");
+    var paymentSuccess = document.getElementById("payment-success");
+
+    bookingForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var date = document.getElementById("date").value;
+      var flightType = document.querySelector('input[name="flight-type"]:checked').value;
+      var infantCount = parseInt(document.getElementById("infant").value);
+      var childCount = parseInt(document.getElementById("child").value);
+      var adultCount = parseInt(document.getElementById("adult").value);
+      var departure = document.getElementById("departure").value;
+      var arrival = document.getElementById("arrival").value;
+
+      if (!date || !departure || !arrival) {
+        alert("Please fill in all required fields.");
+        return;
+      }
+
+      var passengerCount = infantCount + childCount + adultCount;
+
+      var airlines = [
+        { name: "Ubleble Airways", code: "CF102" },
+        { name: "Ubleble Airways", code: "CF642" },
+        { name: "Ubleble Airways", code: "CF125" },
+        { name: "Ubleble Airways", code: "CF342" },
+        { name: "Ubleble Airways", code: "CF321" },
+        { name: "Ubleble Airways", code: "CF743" },
+        { name: "Ubleble Airways", code: "CF127" },
+        { name: "Ubleble Airways", code: "CF1053" },
+        { name: "Ubleble Airways", code: "CF633" },
+        { name: "Ubleble Airways", code: "CF1589" },
+        { name: "Ubleble Airways", code: "CF1435" },
+        { name: "Ubleble Airways", code: "CF642" },
+        { name: "Ubleble Airways", code: "CF6342" },
+        { name: "Ubleble Airways", code: "CF4538" },
+        { name: "Ubleble Airways", code: "CF6212" },
+        { name: "Ubleble Airways", code: "CF712" },
+        { name: "Ubleble Airways", code: "CF831" },
+        { name: "Ubleble Airways", code: "CF10" },
+        { name: "Ubleble Airways", code: "CF8102" },
+        { name: "Ubleble Airways", code: "CF9012" },
+        { name: "Ubleble Airways", code: "CF2341" },
+        { name: "Ubleble Airways", code: "CF6921" },
+        { name: "Ubleble Airways", code: "CF823" },
+        { name: "Ubleble Airways", code: "CF420" },
+        { name: "Ubleble Airways", code: "CF6942" },
+        { name: "Ubleble Airways", code: "CF1842" },
+        { name: "Ubleble Airways", code: "CF621" },
+        { name: "Ubleble Airways", code: "CF1035" },
+        { name: "Ubleble Airways", code: "CF2361" },
+        { name: "Ubleble Airways", code: "CF7102" },
+      ];
+
+      flightsContainer.innerHTML = "<h2>Available Flights:</h2>";
+
+      for (var i = 0; i < airlines.length; i++) {
+        var airline = airlines[i];
+        var price = getRandomPrice(49.99, 999.99);
+        var time = getRandomTime();
+
+        var flightElement = document.createElement("div");
+        flightElement.classList.add("flight");
+        flightElement.innerHTML =
+          "<p>" + airline.name + " (" + airline.code + ")</p>" +
+          "<p>Price: " + price + " $</p>" +
+          "<p>Departure: " + time + "</p>";
+
+        var selectButton = document.createElement("button");
+        selectButton.textContent = "Select";
+        selectButton.dataset.airline = airline.name;
+        selectButton.dataset.price = price;
+        selectButton.dataset.time = time;
+        selectButton.addEventListener("click", selectFlight);
+
+        flightElement.appendChild(selectButton);
+        flightsContainer.appendChild(flightElement);
+      }
+
+      flightsContainer.style.display = "block";
+    });
+
+    function selectFlight(event) {
+      var airline = event.target.dataset.airline;
+      var price = event.target.dataset.price;
+      var time = event.target.dataset.time;
+
+      flightsContainer.style.display = "none";
+      paymentContainer.style.display = "block";
+
+      paymentForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        var name = document.getElementById("name").value;
+        var surname = document.getElementById("surname").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+
+        if (!name || !surname || !email) {
+          alert("Please fill in all required fields.");
+          return;
+        }
+
+        paymentContainer.style.display = "none";
+        paymentSuccess.style.display = "block";
+      });
+    }
+
+    function getRandomPrice(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function getRandomTime() {
+      var hours = padZero(Math.floor(Math.random() * 24));
+      var minutes = padZero(Math.floor(Math.random() * 60));
+      return hours + ":" + minutes;
+    }
+
+    function padZero(value) {
+      return value.toString().padStart(2, "0");
+    }
+  </script>
+</body>
+</html>
